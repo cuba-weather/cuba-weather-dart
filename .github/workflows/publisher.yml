@@ -1,0 +1,25 @@
+name: Publisher
+
+on:
+  push:
+    tags:
+    - 'v*.*.*'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    container:
+      image:  google/dart:latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install dependencies
+      run: pub get
+    - name: Publish package
+      uses: sakebook/actions-flutter-pub-publisher@v1.2.1
+      with:
+        credential: ${{ secrets.CREDENTIAL_JSON }}
+        flutter_package: false
+        skip_test: true
