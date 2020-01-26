@@ -5,17 +5,20 @@ class WeatherForecastModel {
   final int temperatureMax;
   final int temperatureMin;
   final State state;
+  final String stateDescription;
 
   const WeatherForecastModel({
     this.day,
     this.temperatureMax,
     this.temperatureMin,
     this.state,
+    this.stateDescription,
   });
 
   @override
   String toString() {
     return 'Day: $day, Maximum Temperature: $temperatureMax°C, '
-        'Minimum Temperature: $temperatureMin°C, State: $state';
+        'Minimum Temperature: $temperatureMin°C, State: $state, '
+        'State Description: $stateDescription';
   }
 }

@@ -1,5 +1,11 @@
 # Cuba Weather Dart Changelog
 
+## [2.1.0] - January 26, 2020
+
+* Get today's weather forecast information
+* Get drought status information
+* Get description state information
+
 ## [2.0.1] - January 26, 2020
 
 * Implement windstring parser for obtain velocity and direction of wind
