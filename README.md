@@ -1,14 +1,13 @@
-# cuba_weather_dart
+# Cuba Weather Dart
 
-A new Flutter package project.
+[![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT) ![Pub Version](https://img.shields.io/pub/v/cuba_weather_dart) ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/cuba-weather/cuba-weather-dart/Publisher)
 
-## Getting Started
+Application programming interface of the Cuba Weather project implemented in Dart.
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+- To see how to install the package, follow this [link](https://pub.dev/packages/cuba_weather_dart#-installing-tab-).
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+- To see examples of use, follow this [link](example/README.md).
+
+- To see the package page on [pub.dev](https://pub.dev), follow this [link](https://pub.dev/packages/cuba_weather_dart).
+
+- To see the changelog, follow this [link](CHANGELOG.md).
