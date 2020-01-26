@@ -26,6 +26,8 @@ class WeatherRepository {
       pressure: weatherRedCuba.pressure,
       windVelocity: double.parse(windVelocity) * 3.6,
       windDirection: windDirection,
+      weatherForecast: weatherInsMet.weatherForecast,
+      droughtStatus: weatherInsMet.droughtStatus,
       temperature: weatherRedCuba.temp.toInt(),
       temperatureMax: weatherInsMet.days.first.max,
       temperatureMin: weatherInsMet.days.first.min,
