@@ -13,6 +13,7 @@ class WeatherModel {
   final double windVelocity;
   final String windDirection;
   final State state;
+  final String stateDescription;
   final forecasts = List<WeatherForecastModel>();
 
   WeatherModel({
@@ -26,6 +27,7 @@ class WeatherModel {
     this.windVelocity,
     this.windDirection,
     this.state,
+    this.stateDescription,
   });
 
   void addForecast({
@@ -33,12 +35,14 @@ class WeatherModel {
     int temperatureMax,
     int temperatureMin,
     State state,
+    String stateDescription
   }) {
     forecasts.add(WeatherForecastModel(
       day: day,
       temperatureMax: temperatureMax,
       temperatureMin: temperatureMin,
       state: state,
+      stateDescription: stateDescription,
     ));
   }
 
@@ -55,6 +59,7 @@ class WeatherModel {
     result.write('Wind Velocity: $windVelocity Km/h\n');
     result.write('Wind Direction: $windDirection\n');
     result.write('State: $state\n');
+    result.write('State Description: $stateDescription\n');
     for (var i = 0; i < forecasts.length; ++i) {
       result.write('${forecasts[i]}');
       if (i + 1 < forecasts.length) {

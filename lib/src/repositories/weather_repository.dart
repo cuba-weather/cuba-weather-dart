@@ -30,15 +30,16 @@ class WeatherRepository {
       temperatureMax: weatherInsMet.days.first.max,
       temperatureMin: weatherInsMet.days.first.min,
       state: weatherInsMet.days.first.state,
+      stateDescription: weatherInsMet.days.first.description,
     );
     for (var i = 1; i < weatherInsMet.days.length; ++i) {
       var forecast = weatherInsMet.days[i];
       weather.addForecast(
-        day: forecast.day,
-        temperatureMax: forecast.max,
-        temperatureMin: forecast.min,
-        state: forecast.state,
-      );
+          day: forecast.day,
+          temperatureMax: forecast.max,
+          temperatureMin: forecast.min,
+          state: forecast.state,
+          stateDescription: forecast.description);
     }
     return weather;
   }
