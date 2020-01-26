@@ -1,7 +1,5 @@
 library cuba_weather_dart;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'package:cuba_weather_dart/src/cuba_weather.dart';
+export 'package:cuba_weather_dart/src/models/models.dart';
+export 'package:cuba_weather_dart/src/repositories/repositories.dart';
