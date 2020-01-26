@@ -1,5 +1,9 @@
 # Cuba Weather Dart Changelog
 
+## [2.0.1] - January 26, 2020
+
+* Implement windstring parser for obtain velocity and direction of wind
+
 ## [2.0.0]
 
 * Use forecast from insmet.cu
