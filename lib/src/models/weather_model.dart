@@ -10,7 +10,8 @@ class WeatherModel {
   final DateTime dateTime;
   final double pressure;
   final double humidity;
-  final String winds;
+  final double windVelocity;
+  final String windDirection;
   final State state;
   final forecasts = List<WeatherForecastModel>();
 
@@ -22,7 +23,8 @@ class WeatherModel {
     this.dateTime,
     this.pressure,
     this.humidity,
-    this.winds,
+    this.windVelocity,
+    this.windDirection,
     this.state,
   });
 
@@ -50,7 +52,8 @@ class WeatherModel {
     result.write('Datetime Update: $dateTime\n');
     result.write('Humidity: $humidity%\n');
     result.write('Pressure: $pressure hPa\n');
-    result.write('Wind: $winds\n');
+    result.write('Wind Velocity: $windVelocity Km/h\n');
+    result.write('Wind Direction: $windDirection\n');
     result.write('State: $state\n');
     for (var i = 0; i < forecasts.length; ++i) {
       result.write('${forecasts[i]}');

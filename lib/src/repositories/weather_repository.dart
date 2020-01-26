@@ -12,12 +12,20 @@ class WeatherRepository {
   Future<WeatherModel> getWeather(String input) async {
     var weatherInsMet = await cubaWeatherInsMet.get(input);
     var weatherRedCuba = await cubaWeatherRedCuba.get(input);
+    var windString = weatherRedCuba.windstring;
+    var beginIndex = windString.indexOf('Velocidad') + 9;
+    var endIndex = windString.indexOf('m/s');
+    var windVelocity = windString.substring(beginIndex, endIndex).trim();
+    beginIndex = endIndex + 3;
+    endIndex = windString.length;
+    var windDirection = windString.substring(beginIndex, endIndex).trim();
     var weather = WeatherModel(
       cityName: weatherRedCuba.cityName,
       dateTime: weatherRedCuba.dt.date,
       humidity: weatherRedCuba.humidity,
       pressure: weatherRedCuba.pressure,
-      winds: weatherRedCuba.windstring,
+      windVelocity: double.parse(windVelocity) * 3.6,
+      windDirection: windDirection,
       temperature: weatherRedCuba.temp.toInt(),
       temperatureMax: weatherInsMet.days.first.max,
       temperatureMin: weatherInsMet.days.first.min,
