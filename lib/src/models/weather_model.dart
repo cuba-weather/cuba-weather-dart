@@ -1,4 +1,5 @@
 import 'package:cuba_weather_insmet_dart/cuba_weather_insmet_dart.dart';
+import 'package:cuba_weather_redcuba_dart/cuba_weather_redcuba_dart.dart';
 
 import 'package:cuba_weather_dart/src/models/models.dart';
 
@@ -11,7 +12,8 @@ class WeatherModel {
   final double pressure;
   final double humidity;
   final double windVelocity;
-  final String windDirection;
+  final CardinalPoint windDirection;
+  final String windDirectionDescription;
   final String weatherForecast;
   final String droughtStatus;
   final State state;
@@ -28,6 +30,7 @@ class WeatherModel {
     this.humidity,
     this.windVelocity,
     this.windDirection,
+    this.windDirectionDescription,
     this.weatherForecast,
     this.droughtStatus,
     this.state,
