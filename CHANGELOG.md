@@ -1,5 +1,9 @@
 # Cuba Weather Dart Changelog
 
+## [2.2.0] - January 27, 2020
+
+* Implement parse for wind direction
+
 ## [2.1.0] - January 26, 2020
 
 * Get today's weather forecast information
