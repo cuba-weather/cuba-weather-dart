@@ -1,5 +1,9 @@
 # Cuba Weather Dart Changelog
 
+## [2.3.0] - January 27, 2020
+
+* Add all directions of wind
+
 ## [2.2.0] - January 27, 2020
 
 * Implement parse for wind direction
