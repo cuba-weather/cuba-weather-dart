@@ -20,6 +20,8 @@ class WeatherRepository {
       windVelocity: weatherRedCuba.windVelocity,
       windDirection: weatherRedCuba.windDirection,
       windDirectionDescription: weatherRedCuba.windDirectionDescription,
+      windDirectionDegree: weatherRedCuba.windDirectionDegree,
+      windDirectionRadians: weatherRedCuba.windDirectionRadians,
       weatherForecast: weatherInsMet.weatherForecast,
       droughtStatus: weatherInsMet.droughtStatus,
       temperature: weatherRedCuba.temp.toInt(),

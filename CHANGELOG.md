@@ -1,5 +1,9 @@
 # Cuba Weather Dart Changelog
 
+## [2.4.0] - February 4, 2020
+
+* Add radians and degree of wind
+
 ## [2.3.0] - January 27, 2020
 
 * Add all directions of wind
