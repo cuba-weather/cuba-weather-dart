@@ -42,7 +42,7 @@ packages:
       name: cuba_weather_insmet_dart
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.2.1"
+    version: "0.2.2"
   cuba_weather_municipality_dart:
     dependency: transitive
     description:
