@@ -14,6 +14,8 @@ class WeatherModel {
   final double windVelocity;
   final CardinalPoint windDirection;
   final String windDirectionDescription;
+  final int windDirectionDegree;
+  final double windDirectionRadians;
   final String weatherForecast;
   final String droughtStatus;
   final State state;
@@ -31,6 +33,8 @@ class WeatherModel {
     this.windVelocity,
     this.windDirection,
     this.windDirectionDescription,
+    this.windDirectionDegree,
+    this.windDirectionRadians,
     this.weatherForecast,
     this.droughtStatus,
     this.state,
@@ -65,6 +69,8 @@ class WeatherModel {
     result.write('Pressure: $pressure hPa\n');
     result.write('Wind Velocity: $windVelocity Km/h\n');
     result.write('Wind Direction: $windDirection\n');
+    result.write('Wind Direction Degree: ${windDirectionDegree}\n');
+    result.write('Wind Direction Radians: ${windDirectionRadians}\n');
     result.write('Today\'s Weather Forecast: $weatherForecast\n');
     result.write('Drought Status: $droughtStatus\n');
     result.write('State: $state\n');
