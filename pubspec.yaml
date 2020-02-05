@@ -7,5 +7,5 @@ environment:
   sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
-  cuba_weather_insmet_dart: ^0.2.1
+  cuba_weather_insmet_dart: ^0.2.2
   cuba_weather_redcuba_dart: ^2.3.0
