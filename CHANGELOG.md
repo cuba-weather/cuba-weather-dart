@@ -1,5 +1,9 @@
 # Cuba Weather Dart Changelog
 
+## [2.5.0] - February 4, 2020
+
+* Update dependencies
+
 ## [2.4.0] - February 4, 2020
 
 * Add radians and degree of wind
