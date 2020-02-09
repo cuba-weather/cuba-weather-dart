@@ -1,5 +1,9 @@
 # Cuba Weather Dart Changelog
 
+## [2.5.1] - February 9, 2020
+
+* Update dependencies
+
 ## [2.5.0] - February 4, 2020
 
 * Update dependencies
