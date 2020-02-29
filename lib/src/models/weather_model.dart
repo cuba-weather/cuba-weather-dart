@@ -20,7 +20,7 @@ class WeatherModel {
   final String droughtStatus;
   final State state;
   final String stateDescription;
-  final forecasts = List<WeatherForecastModel>();
+  var forecasts = List<WeatherForecastModel>();
 
   WeatherModel({
     this.cityName,
