@@ -2,6 +2,8 @@ import 'package:cuba_weather_dart/src/models/models.dart';
 import 'package:cuba_weather_dart/src/repositories/repositories.dart';
 
 class CubaWeather {
+  final insmetForecastRepository = InsmetForecastRepository();
+  final insmetMarineForecastRepository = InsmetMarineForecastRepository();
   final insmetSourceRepository = InsmetSourceRepository();
   final insmetWeatherRepository = InsmetWeatherRepository();
   final municipalityRepository = MunicipalityRepository();
@@ -39,6 +41,26 @@ class CubaWeather {
           stateDescription: forecast.description);
     }
     return weather;
+  }
+
+  /// Method for obtain today forecast from Insmet.
+  Future<InsmetForecastModel> getInsmetTodayForecast() async {
+    return await insmetForecastRepository.getTodayForecast();
+  }
+
+  /// Method for obtain tomorrow forecast from Insmet.
+  Future<InsmetForecastModel> getInsmetTomorrowForecast() async {
+    return await insmetForecastRepository.getTomorrowForecast();
+  }
+
+  /// Method for obtain perspective forecast from Insmet.
+  Future<InsmetForecastModel> getInsmetPerspectiveForecast() async {
+    return await insmetForecastRepository.getPerspectiveForecast();
+  }
+
+  /// Method for obtain marine forecast from Insmet.
+  Future<InsmetMarineForecastModel> getInsmetMarineForecast() async {
+    return await insmetMarineForecastRepository.getMarineForecast();
   }
 
   /// Method that given a municipality searches the cuban municipalities to
