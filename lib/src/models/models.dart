@@ -1,2 +1,10 @@
+export 'cardinal_point.dart';
+export 'insmet_state.dart';
+export 'insmet_weather_day_model.dart';
+export 'insmet_weather_model.dart';
+export 'municipality_model.dart';
+export 'redcuba_weather_date_model.dart';
+export 'redcuba_weather_model.dart';
+export 'source_model.dart';
 export 'weather_forecast_model.dart';
 export 'weather_model.dart';

@@ -1,5 +1,11 @@
 # Cuba Weather Dart Changelog
 
+## [2.6.0] - March 3, 2020
+
+* Make package atomic
+* Remove another dependencies
+* Fix name of municipalities
+
 ## [2.5.1] - February 9, 2020
 
 * Update dependencies

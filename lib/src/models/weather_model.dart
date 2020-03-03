@@ -1,25 +1,22 @@
-import 'package:cuba_weather_insmet_dart/cuba_weather_insmet_dart.dart';
-import 'package:cuba_weather_redcuba_dart/cuba_weather_redcuba_dart.dart';
-
 import 'package:cuba_weather_dart/src/models/models.dart';
 
 class WeatherModel {
-  final String cityName;
-  final int temperature;
-  final int temperatureMax;
-  final int temperatureMin;
-  final DateTime dateTime;
-  final double pressure;
-  final double humidity;
-  final double windVelocity;
-  final CardinalPoint windDirection;
-  final String windDirectionDescription;
-  final int windDirectionDegree;
-  final double windDirectionRadians;
-  final String weatherForecast;
-  final String droughtStatus;
-  final State state;
-  final String stateDescription;
+  String cityName;
+  int temperature;
+  int temperatureMax;
+  int temperatureMin;
+  DateTime dateTime;
+  double pressure;
+  double humidity;
+  double windVelocity;
+  CardinalPoint windDirection;
+  String windDirectionDescription;
+  int windDirectionDegree;
+  double windDirectionRadians;
+  String weatherForecast;
+  String droughtStatus;
+  InsmetState state;
+  String stateDescription;
   var forecasts = List<WeatherForecastModel>();
 
   WeatherModel({
@@ -41,13 +38,12 @@ class WeatherModel {
     this.stateDescription,
   });
 
-  void addForecast({
-    int day,
-    int temperatureMax,
-    int temperatureMin,
-    State state,
-    String stateDescription
-  }) {
+  void addForecast(
+      {int day,
+      int temperatureMax,
+      int temperatureMin,
+      InsmetState state,
+      String stateDescription}) {
     forecasts.add(WeatherForecastModel(
       day: day,
       temperatureMax: temperatureMax,

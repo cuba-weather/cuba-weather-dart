@@ -1,10 +1,10 @@
-import 'package:cuba_weather_insmet_dart/cuba_weather_insmet_dart.dart';
+import 'package:cuba_weather_dart/cuba_weather_dart.dart';
 
 class WeatherForecastModel {
   final int day;
   final int temperatureMax;
   final int temperatureMin;
-  final State state;
+  final InsmetState state;
   final String stateDescription;
 
   const WeatherForecastModel({
