@@ -1,4 +1,6 @@
 export 'cardinal_point.dart';
+export 'insmet_forecast_model.dart';
+export 'insmet_marine_forecast_model.dart';
 export 'insmet_state.dart';
 export 'insmet_weather_day_model.dart';
 export 'insmet_weather_model.dart';
