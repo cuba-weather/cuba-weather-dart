@@ -10,4 +10,5 @@ enum InsmetState {
   Storms,
   AfternoonStorms,
   MorningScatteredShowers,
+  Winds,
 }
