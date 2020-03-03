@@ -1,5 +1,12 @@
 # Cuba Weather Dart Changelog
 
+## [3.0.0] - March 3, 2020
+
+* Implement insmet today forecast
+* Implement insmet tomorrow forecast
+* Implement insmet perspective forecast
+* Implement insmet marine forecast
+
 ## [2.6.0] - March 3, 2020
 
 * Make package atomic
