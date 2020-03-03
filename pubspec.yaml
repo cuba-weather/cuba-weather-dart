@@ -1,6 +1,6 @@
 name: cuba_weather_dart
 description: Application programming interface of the Cuba Weather project implemented in Dart
-version: 3.0.0
+version: 3.0.1
 homepage: https://github.com/cuba-weather/cuba-weather-dart
 
 environment:

@@ -1,5 +1,9 @@
 # Cuba Weather Dart Changelog
 
+## [3.0.1] - March 3, 2020
+
+* Add new state to insmet and fix descriptions
+
 ## [3.0.0] - March 3, 2020
 
 * Implement insmet today forecast
