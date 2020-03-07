@@ -9,8 +9,8 @@ import 'package:cuba_weather_dart/src/models/models.dart';
 
 class InsmetMarineForecastRepository {
   Future<InsmetMarineForecastModel> getMarineForecast() async {
-    var forecast = new InsmetMarineForecastModel();
-    forecast.authors = new List<String>();
+    var forecast = InsmetMarineForecastModel();
+    forecast.authors = List<String>();
     forecast.centerName =
         "CENTRO DE METEOROLOGÍA MARINA. INSTITUTO DE METEOROLOGÍA (C.I.T.M.A)";
     forecast.forecastName =

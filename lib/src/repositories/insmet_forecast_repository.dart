@@ -10,8 +10,8 @@ import 'package:cuba_weather_dart/src/models/models.dart';
 
 class InsmetForecastRepository {
   Future<InsmetForecastModel> getTodayForecast() async {
-    var forecast = new InsmetForecastModel();
-    forecast.authors = new List<String>();
+    var forecast = InsmetForecastModel();
+    forecast.authors = List<String>();
     try {
       var url = 'http://www.insmet.cu/asp/link.asp?PRONOSTICO';
       var response = await get(url);
@@ -63,8 +63,8 @@ class InsmetForecastRepository {
   }
 
   Future<InsmetForecastModel> getTomorrowForecast() async {
-    var forecast = new InsmetForecastModel();
-    forecast.authors = new List<String>();
+    var forecast = InsmetForecastModel();
+    forecast.authors = List<String>();
     try {
       var url =
           'http://www.insmet.cu/asp/genesis.asp?TB0=PLANTILLAS&TB1=PTM&TB2=/Pronostico/Ptm.txt';
@@ -117,8 +117,8 @@ class InsmetForecastRepository {
   }
 
   Future<InsmetForecastModel> getPerspectiveForecast() async {
-    var forecast = new InsmetForecastModel();
-    forecast.authors = new List<String>();
+    var forecast = InsmetForecastModel();
+    forecast.authors = List<String>();
     forecast.forecastTitle = "";
     try {
       var url =

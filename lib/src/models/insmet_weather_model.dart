@@ -68,7 +68,7 @@ class InsmetWeatherModel {
     var line = input.split('\n').join(' ').split(' ').reduce((v, e) {
       return e == null || e.isEmpty || e == ' ' || e == '\n' ? v : '$v $e';
     });
-    line = line.replaceAll(new RegExp(r"\s+\b|\b\s|\t|\t\t"), ' ');
+    line = line.replaceAll(RegExp(r"\s+\b|\b\s|\t|\t\t"), ' ');
     var document = parse(line);
     var result = parse(document.body.text).documentElement.text;
     result = result.split(' ').reduce((v, e) {
@@ -96,7 +96,7 @@ class InsmetWeatherModel {
     var line = input.split('\n').join(' ').split(' ').reduce((v, e) {
       return e == null || e.isEmpty || e == ' ' || e == '\n' ? v : '$v $e';
     });
-    line = line.replaceAll(new RegExp(r"\s+\b|\b\s|\t|\t\t"), ' ');
+    line = line.replaceAll(RegExp(r"\s+\b|\b\s|\t|\t\t"), ' ');
     var document = parse(line);
     var result = parse(document.body.text).documentElement.text;
     result = result.split(' ').reduce((v, e) {
