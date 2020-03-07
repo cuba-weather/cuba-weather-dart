@@ -1,6 +1,10 @@
 # Cuba Weather Dart Changelog
 
-## [3.0.2] - March 3, 2020
+## [3.0.3] - March 7, 2020
+
+* Remove unnecessary new keyword
+
+## [3.0.2] - March 6, 2020
 
 * Export modules
 

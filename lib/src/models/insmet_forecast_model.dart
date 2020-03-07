@@ -6,7 +6,7 @@ class InsmetForecastModel {
   String forecastText;
   String dataSource;
   String imageUrl;
-  var authors = new List<String>();
+  var authors = List<String>();
 
   InsmetForecastModel({
     this.centerName,
