@@ -1,5 +1,9 @@
 # Cuba Weather Dart Changelog
 
+## [3.0.2] - March 3, 2020
+
+* Export modules
+
 ## [3.0.1] - March 3, 2020
 
 * Add new state to insmet and fix descriptions
