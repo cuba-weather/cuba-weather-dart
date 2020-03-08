@@ -1,9 +1,14 @@
 import 'dart:math';
 
+import 'package:json_annotation/json_annotation.dart';
+
 import 'package:cuba_weather_dart/src/models/models.dart';
+
+part 'redcuba_weather_model.g.dart';
 
 /// Model class for mapping the json returned by the https://www.redcuba.cu
 /// weather API
+@JsonSerializable()
 class RedCubaWeatherModel {
   String cityName;
   RedCubaWeatherDateModel dt;
@@ -35,7 +40,7 @@ class RedCubaWeatherModel {
   });
 
   /// Static method that returns an instance of the class from the json provided
-  static RedCubaWeatherModel fromJson(dynamic json) {
+  static RedCubaWeatherModel parse(dynamic json) {
     final data = json['data'];
     var windString = data['windstring'];
     var beginIndex = windString.indexOf('Velocidad') + 9;
@@ -48,7 +53,7 @@ class RedCubaWeatherModel {
     var windDegree = _parseWindDegree(windDirectionDesc);
     return RedCubaWeatherModel(
       cityName: data['cityName'],
-      dt: RedCubaWeatherDateModel.fromJson(data['dt']),
+      dt: RedCubaWeatherDateModel.parse(data['dt']),
       temp: double.parse(data['temp'].toString()),
       pressure: double.parse(data['pressure'].toString()),
       humidity: double.parse(data['humidity'].toString()),
@@ -130,4 +135,8 @@ class RedCubaWeatherModel {
         return CardinalPoint.North;
     }
   }
+
+  factory RedCubaWeatherModel.fromJson(Map<String, dynamic> json) => _$RedCubaWeatherModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$RedCubaWeatherModelToJson(this);
 }

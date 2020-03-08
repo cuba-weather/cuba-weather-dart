@@ -1,5 +1,10 @@
+import 'package:json_annotation/json_annotation.dart';
+
 import 'package:cuba_weather_dart/src/models/models.dart';
 
+part 'weather_model.g.dart';
+
+@JsonSerializable()
 class WeatherModel {
   String cityName;
   int temperature;
@@ -28,6 +33,7 @@ class WeatherModel {
     this.windDirectionRadians,
     this.weatherForecast,
     this.droughtStatus,
+    this.forecasts,
   });
 
   void addForecast(
@@ -36,6 +42,9 @@ class WeatherModel {
       int temperatureMin,
       InsmetState state,
       String stateDescription}) {
+    if (forecasts == null) {
+      forecasts = List<WeatherForecastModel>();
+    }
     forecasts.add(WeatherForecastModel(
       day: day,
       temperatureMax: temperatureMax,
@@ -77,4 +86,8 @@ class WeatherModel {
     }
     return result.toString();
   }
+
+  factory WeatherModel.fromJson(Map<String, dynamic> json) => _$WeatherModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$WeatherModelToJson(this);
 }

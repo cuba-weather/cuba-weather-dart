@@ -1,7 +1,11 @@
 import 'package:cuba_weather_dart/src/models/models.dart';
+import 'package:json_annotation/json_annotation.dart';
+
+part 'insmet_weather_day_model.g.dart';
 
 /// Model class for mapping part of the json returned by the
 /// https://www.insmet.cu weather API
+@JsonSerializable()
 class InsmetWeatherDayModel {
   int day;
   int max;
@@ -20,6 +24,10 @@ class InsmetWeatherDayModel {
     return 'Day: $day, Maximum Temperature: $max°C, '
         'Minimum Temperature: $min°C, State: $state, Description: $description';
   }
+
+  factory InsmetWeatherDayModel.fromJson(Map<String, dynamic> json) => _$InsmetWeatherDayModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$InsmetWeatherDayModelToJson(this);
 }
 
 final dictStringToState = {

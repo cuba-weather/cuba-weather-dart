@@ -1,9 +1,13 @@
 import 'package:html/parser.dart';
+import 'package:json_annotation/json_annotation.dart';
 
 import 'package:cuba_weather_dart/src/models/models.dart';
 
+part 'insmet_weather_model.g.dart';
+
 /// Model class for mapping the json returned by the https://www.insmet.cu
 /// weather API
+@JsonSerializable()
 class InsmetWeatherModel {
   String cityName;
   DateTime datetime;
@@ -12,12 +16,20 @@ class InsmetWeatherModel {
   var days = List<InsmetWeatherDayModel>();
 
   /// Class constructor
-  InsmetWeatherModel(List<String> data)
-      : assert(data != null && data.length >= 24) {
-    cityName = data[0];
-    datetime = DateTime.parse(_parseDatetime(data[1]));
-    weatherForecast = _parseForecast(data[2]);
-    droughtStatus = _parseDrought(data[3]);
+  InsmetWeatherModel({
+    this.cityName,
+    this.datetime,
+    this.weatherForecast,
+    this.droughtStatus,
+    this.days,
+  });
+
+  static InsmetWeatherModel fromData(List<String> data) {
+    var cityName = data[0];
+    var datetime = DateTime.parse(_parseDatetime(data[1]));
+    var weatherForecast = _parseForecast(data[2]);
+    var droughtStatus = _parseDrought(data[3]);
+    var days = List<InsmetWeatherDayModel>();
     for (var i = 4; i < data.length; i += 4) {
       days.add(InsmetWeatherDayModel(
         day: int.parse(data[i]),
@@ -26,6 +38,13 @@ class InsmetWeatherModel {
         description: data[i + 3],
       ));
     }
+    return InsmetWeatherModel(
+      cityName: cityName,
+      datetime: datetime,
+      weatherForecast: weatherForecast,
+      droughtStatus: droughtStatus,
+      days: days,
+    );
   }
 
   @override
@@ -121,4 +140,9 @@ class InsmetWeatherModel {
     buffer.write('.');
     return buffer.toString();
   }
+
+  factory InsmetWeatherModel.fromJson(Map<String, dynamic> json) =>
+      _$InsmetWeatherModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$InsmetWeatherModelToJson(this);
 }

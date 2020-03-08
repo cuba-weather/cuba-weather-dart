@@ -1,5 +1,10 @@
+import 'package:json_annotation/json_annotation.dart';
+
 import 'package:cuba_weather_dart/cuba_weather_dart.dart';
 
+part 'weather_forecast_model.g.dart';
+
+@JsonSerializable()
 class WeatherForecastModel {
   final int day;
   final int temperatureMax;
@@ -21,4 +26,8 @@ class WeatherForecastModel {
         'Minimum Temperature: $temperatureMin°C, State: $state, '
         'State Description: $stateDescription';
   }
+
+  factory WeatherForecastModel.fromJson(Map<String, dynamic> json) => _$WeatherForecastModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$WeatherForecastModelToJson(this);
 }

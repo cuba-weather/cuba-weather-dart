@@ -19,6 +19,6 @@ class RedCubaWeatherApiClient {
       throw BadRequestException('Bad request');
     }
     final json = jsonDecode(resp.body);
-    return RedCubaWeatherModel.fromJson(json);
+    return RedCubaWeatherModel.parse(json);
   }
 }

@@ -1,3 +1,8 @@
+import 'package:json_annotation/json_annotation.dart';
+
+part 'insmet_marine_forecast_model.g.dart';
+
+@JsonSerializable()
 class InsmetMarineForecastModel {
   String centerName;
   String forecastName;
@@ -44,4 +49,8 @@ class InsmetMarineForecastModel {
     }
     return result.toString();
   }
+
+  factory InsmetMarineForecastModel.fromJson(Map<String, dynamic> json) => _$InsmetMarineForecastModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$InsmetMarineForecastModelToJson(this);
 }

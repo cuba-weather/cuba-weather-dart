@@ -49,7 +49,7 @@ class InsmetWeatherApiClient {
           for (var td in desc.findAllElements('td')) {
             data.add(td.text.trim());
           }
-          return InsmetWeatherModel(data);
+          return InsmetWeatherModel.fromData(data);
         } catch (e) {
           log(e.toString());
           throw ParseException(e.toString());

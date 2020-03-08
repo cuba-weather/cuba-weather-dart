@@ -1,4 +1,9 @@
+import 'package:json_annotation/json_annotation.dart';
+
+part 'municipality_model.g.dart';
+
 /// Class of represent a Municipality
+@JsonSerializable()
 class MunicipalityModel {
   final String name, nameCured;
   final double lat, lon;
@@ -14,4 +19,8 @@ class MunicipalityModel {
     result.write('Name Cured: ${nameCured}');
     return result.toString();
   }
+
+  factory MunicipalityModel.fromJson(Map<String, dynamic> json) => _$MunicipalityModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$MunicipalityModelToJson(this);
 }
