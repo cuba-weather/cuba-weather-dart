@@ -1,5 +1,9 @@
 # Cuba Weather Dart Changelog
 
+## [3.0.5] - March 8, 2020
+
+* Implement parser for models
+
 ## [3.0.4] - March 7, 2020
 
 * Change models
