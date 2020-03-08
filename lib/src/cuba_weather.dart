@@ -26,20 +26,10 @@ class CubaWeather {
       weatherForecast: weatherInsmet.weatherForecast,
       droughtStatus: weatherInsmet.droughtStatus,
       temperature: weatherRedCuba.temp.toInt(),
-      temperatureMax: weatherInsmet.days.first.max,
-      temperatureMin: weatherInsmet.days.first.min,
-      state: weatherInsmet.days.first.state,
-      stateDescription: weatherInsmet.days.first.description,
     );
-    for (var i = 1; i < weatherInsmet.days.length; ++i) {
-      var forecast = weatherInsmet.days[i];
-      weather.addForecast(
-          day: forecast.day,
-          temperatureMax: forecast.max,
-          temperatureMin: forecast.min,
-          state: forecast.state,
-          stateDescription: forecast.description);
-    }
+    weatherInsmet.days.forEach((forecast) {
+      weather.addForecastDay(forecast);
+    });
     return weather;
   }
 

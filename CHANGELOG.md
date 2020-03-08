@@ -1,5 +1,9 @@
 # Cuba Weather Dart Changelog
 
+## [3.0.4] - March 7, 2020
+
+* Change models
+
 ## [3.0.3] - March 7, 2020
 
 * Remove unnecessary new keyword

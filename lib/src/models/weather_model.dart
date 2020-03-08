@@ -3,8 +3,6 @@ import 'package:cuba_weather_dart/src/models/models.dart';
 class WeatherModel {
   String cityName;
   int temperature;
-  int temperatureMax;
-  int temperatureMin;
   DateTime dateTime;
   double pressure;
   double humidity;
@@ -15,15 +13,11 @@ class WeatherModel {
   double windDirectionRadians;
   String weatherForecast;
   String droughtStatus;
-  InsmetState state;
-  String stateDescription;
   var forecasts = List<WeatherForecastModel>();
 
   WeatherModel({
     this.cityName,
     this.temperature,
-    this.temperatureMax,
-    this.temperatureMin,
     this.dateTime,
     this.pressure,
     this.humidity,
@@ -34,8 +28,6 @@ class WeatherModel {
     this.windDirectionRadians,
     this.weatherForecast,
     this.droughtStatus,
-    this.state,
-    this.stateDescription,
   });
 
   void addForecast(
@@ -53,13 +45,21 @@ class WeatherModel {
     ));
   }
 
+  void addForecastDay(InsmetWeatherDayModel forecast) {
+    addForecast(
+      day: forecast.day,
+      temperatureMax: forecast.max,
+      temperatureMin: forecast.min,
+      state: forecast.state,
+      stateDescription: forecast.description,
+    );
+  }
+
   @override
   String toString() {
     var result = StringBuffer();
     result.write('City Name: $cityName\n');
     result.write('Temperature: $temperature°C\n');
-    result.write('Temperature Max: $temperatureMax°C\n');
-    result.write('Temperature Min: $temperatureMin°C\n');
     result.write('Datetime Update: $dateTime\n');
     result.write('Humidity: $humidity%\n');
     result.write('Pressure: $pressure hPa\n');
@@ -69,8 +69,6 @@ class WeatherModel {
     result.write('Wind Direction Radians: ${windDirectionRadians}\n');
     result.write('Today\'s Weather Forecast: $weatherForecast\n');
     result.write('Drought Status: $droughtStatus\n');
-    result.write('State: $state\n');
-    result.write('State Description: $stateDescription\n');
     for (var i = 0; i < forecasts.length; ++i) {
       result.write('${forecasts[i]}');
       if (i + 1 < forecasts.length) {
