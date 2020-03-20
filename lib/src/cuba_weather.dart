@@ -3,6 +3,7 @@ import 'package:cuba_weather_dart/src/repositories/repositories.dart';
 
 class CubaWeather {
   final insmetForecastRepository = InsmetForecastRepository();
+  final insmetSatelliteRepository = InsmetSatelliteRepository();
   final insmetMarineForecastRepository = InsmetMarineForecastRepository();
   final insmetSourceRepository = InsmetSourceRepository();
   final insmetWeatherRepository = InsmetWeatherRepository();
@@ -46,6 +47,27 @@ class CubaWeather {
   /// Method for obtain perspective forecast from Insmet.
   Future<InsmetForecastModel> getInsmetPerspectiveForecast() async {
     return await insmetForecastRepository.getPerspectiveForecast();
+  }
+
+    /// Method for obtain satellites images from Insmet.
+  Future<InsmetSatelliteModel> getSatelliteWisconsinMadisonLatestEastir() async {
+    return await insmetSatelliteRepository.getSatelliteWisconsinMadisonLatestEastir();
+  }
+   /// Method for obtain satellites images from Insmet.
+  Future<InsmetSatelliteModel> getSatelliteWisconsinMadisonLatestEastvis() async {
+    return await insmetSatelliteRepository.getSatelliteWisconsinMadisonLatestEastvis();
+  }
+     /// Method for obtain satellites images from Insmet.
+  Future<InsmetSatelliteModel> getSatelliteWisconsinMadisonGOESGSFC() async {
+    return await insmetSatelliteRepository.getSatelliteWisconsinMadisonGOESGSFC();
+  }
+     /// Method for obtain satellites images from Insmet.
+  Future<InsmetSatelliteModel> getSatelliteMarshallSpaceFlightCenterGOESMSFC() async {
+    return await insmetSatelliteRepository.getSatelliteMarshallSpaceFlightCenterGOESMSFC();
+  }
+     /// Method for obtain satellites images from Insmet.
+  Future<InsmetSatelliteModel> getSatelliteWeatherUndergroundIntellicast() async {
+    return await insmetSatelliteRepository.getSatelliteWeatherUndergroundIntellicast();
   }
 
   /// Method for obtain marine forecast from Insmet.
