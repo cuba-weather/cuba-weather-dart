@@ -1,6 +1,6 @@
 # Cuba Weather Dart
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT) ![Pub Version](https://img.shields.io/pub/v/cuba_weather_dart) ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/cuba-weather/cuba-weather-dart/Publisher)
+[![License:GPL-3.0](https://img.shields.io/github/license/cuba-weather/cuba-weather-dart?color=brightgreen&label=License)](https://opensource.org/licenses/GPL-3.0) ![Pub Version](https://img.shields.io/pub/v/cuba_weather_dart) ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/cuba-weather/cuba-weather-dart/Publisher)
 
 Application programming interface of the Cuba Weather project implemented in Dart.
 
