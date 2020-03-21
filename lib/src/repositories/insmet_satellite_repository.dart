@@ -17,7 +17,7 @@ class InsmetSatelliteRepository {
       satellite.dataSource = 'www.insmet.cu';
       satellite.sourceOriginal = 'University of Wisconsin-Madison';
       satellite.sourceUrl = 'http://www.ssec.wisc.edu/';
-      satellite.description = 'N/A';
+      satellite.description = 'Atlántico - Canal infrarrojo';
 
       return satellite;
     } on SocketException catch (e) {
@@ -39,7 +39,7 @@ class InsmetSatelliteRepository {
       satellite.dataSource = 'www.insmet.cu';
       satellite.sourceOriginal = 'University of Wisconsin-Madison';
       satellite.sourceUrl = 'http://www.ssec.wisc.edu/';
-      satellite.description = 'N/A';
+      satellite.description = 'Mosaico - Canal visible';
 
       return satellite;
     } on SocketException catch (e) {
@@ -60,7 +60,7 @@ class InsmetSatelliteRepository {
       satellite.dataSource = 'www.insmet.cu';
       satellite.sourceOriginal = 'University of Wisconsin-Madison';
       satellite.sourceUrl = 'http://www.ssec.wisc.edu/';
-      satellite.description = 'N/A';
+      satellite.description = 'Cono - Canal visible';
 
       return satellite;
     } on SocketException catch (e) {
@@ -78,11 +78,11 @@ class InsmetSatelliteRepository {
 
     try {
       satellite.imageUrl =
-          'http://www.insmet.cu/asp/genesis.asp?TB0=Satelite&TB1=/SATELITE/TMP12/&TB2=5';
+          'http://www.insmet.cu/asp/genesis.asp?TB0=Satelite&TB1=/SATELITE/TMP12/&TB2=$frameNumbers';
       satellite.dataSource = 'www.insmet.cu';
       satellite.sourceOriginal = 'George C. Marshall Space Flight Center';
       satellite.sourceUrl = 'https://weather.msfc.nasa.gov/GOES/';
-      satellite.description = 'N/A';
+      satellite.description = 'Caribe - Canal visible';
 
       return satellite;
     } on SocketException catch (e) {
@@ -100,11 +100,11 @@ class InsmetSatelliteRepository {
 
     try {
       satellite.imageUrl =
-          'http://www.insmet.cu/asp/genesis.asp?TB0=Satelite&TB1=/SATELITE/TMP3/&TB2=5';
+          'http://www.insmet.cu/asp/genesis.asp?TB0=Satelite&TB1=/SATELITE/TMP3/&TB2=$frameNumbers';
       satellite.dataSource = 'www.insmet.cu';
       satellite.sourceOriginal = 'Weather Underground - Intellicast';
       satellite.sourceUrl = 'http://images.intellicast.com';
-      satellite.description = 'N/A';
+      satellite.description = 'Cuba - Canal visible';
 
       return satellite;
     } on SocketException catch (e) {
